@@ -1,0 +1,19 @@
+.indicator {
+    padding-bottom: 20px;
+}
+.graph{
+    padding: 10px;
+}
+#main {
+    padding: 20px;
+    background-color: #eeeeee;
+}
+
+h1,h2,h3{
+    color:gray;
+}
+
+h1{
+    padding-top:20px;
+    padding-Bottom:20px;
+}
