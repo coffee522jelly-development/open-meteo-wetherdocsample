@@ -1,19 +1,69 @@
-.indicator {
-    padding-bottom: 20px;
+
+/*フォント設定*/
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue/BebasNeue-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'inconsolata';
+	src: url('../fonts/inconsolata/inconsolata/static/Ligconsolata-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--light-main-color: #fff;
+	--light-accent-color: #95B0B4;
+	--light-link-color: #06c755;
+	--dark-main-color: 	#243447;
+	--dark-sub-color: #1d2324;
+	--dark-accent-color: #E6F4F1;
+	--dark-link-color: #00ffb3;
+	--radius-size: 7px;
+	--main-font: 'inconsolata', cursive;
+	--sub-font: 'Bebas Neue', sans-serif;
+	--letter-space: 1px;
+	--shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+#indicator{
+	padding: 10px;
 }
 .graph{
     padding: 10px;
 }
 #main {
     padding: 20px;
-    background-color: #eeeeee;
+    background-color: var(--light-main-color);
 }
 
-h1,h2,h3{
-    color:gray;
+p {
+	font-size: 12px;
+	font-family: var(--main-font);
 }
 
-h1{
-    padding-top:20px;
-    padding-Bottom:20px;
+h1 {
+    font-size: 18px;
+    margin: 5px;
+    background-color: var(--light-accent-color);
+    border-radius: var(--radius-size);
+    padding: 15px;
+    font-family: var(--main-font);
+    color: rgb(255, 255, 255);
+    box-shadow: var(--shadow);
+}
+
+@media (prefers-color-scheme: dark) {
+	#main {
+		background-color: var(--dark-main-color);
+	}
+	h1 {
+		color:rgb(230, 230, 230);
+		background-color: var(--dark-sub-color);
+	}
 }

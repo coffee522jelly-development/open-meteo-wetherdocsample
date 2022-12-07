@@ -12,7 +12,7 @@ let lng = 0;
         var data = position.coords;
         lat = data.latitude;
         lng = data.longitude;
-        document.getElementById('result').innerHTML = '<h2>緯度 : ' + lat + ' 経度 : ' + lng + '</h2>';
+        document.getElementById('result').innerHTML = '<p>緯度 : ' + lat + ' 経度 : ' + lng + '</p>';
 
         // 逆ジオコーディング
         const reverseurl = 'https://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress?lat='+ lat +'&lon='+ lng;
@@ -20,7 +20,7 @@ let lng = 0;
         .then(data => data.json())
         .then(json => searchCurrentPosition(json))
          function searchCurrentPosition(json) {
-          document.getElementById('addressOutput').innerHTML = '<h2>場所 :' + json.results.lv01Nm + '</h2>';
+          document.getElementById('addressOutput').innerHTML = '<p>場所 :' + json.results.lv01Nm + '</p>';
          }
 
         // 気温
