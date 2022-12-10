@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>天気ダッシュボードサンプル</title>
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+  <div id="main">
+    <h1>WetherDashboard(週間天気)</h1>
+    <div id='indicator'>
+      <div id="addressOutput"></div>
+      <div id="result"></div>
+    </div>
+    <div class="row">
+      <div id="Stage" class="graph col-6">
+        <h1>Temperature(気温℃)</h1>
+        <canvas id="stage"></canvas>
+      </div>
+      <div id="Humidity" class="graph col-6">
+        <h1>Humidity&Cloudy(湿度/雲量)</h1>
+        <canvas id="humidity"></canvas>
+      </div>
+      <div id="Pressure" class="graph col-6">
+        <h1>Pressure(気圧)</h1>
+        <canvas id="pressure"></canvas>
+      </div>
+      <div id="Wind" class="graph col-6">
+        <h1>WindSpeed(風速)</h1>
+        <canvas id="wind"></canvas>
+      </div>
+    </div>
+  </div>
+  <small><a href="https://open-meteo.com/">Weather data by Open-Meteo.com</a></small>
+
+  <script src="js/common.js"></script>
+  <script src="js/resize.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+</body>
+</html>
